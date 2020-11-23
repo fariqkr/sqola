@@ -65,11 +65,17 @@
 
 {{-- Footer --}}
 <section class="pt-8 pb-8 bg-gray-800 md:pt-8 px-8" id="contact">
-    <div class="container mx-auto items-center">
-        <h1 class="my-4 px-11 text-base text-white font-bold leading-tight text-center md:text-left"> Contact Us </h1>
-        <h6 class="my-1 px-11 text-tiny  text-white text-center md:text-left"> Phone Number: +62-888-8888-888 </h6>
-        <h6 class="my-1 px-11 text-tiny  text-white text-center md:text-left"> Email: contact@sqola.id </h6>
-        <h6 class="my-1 px-11 text-tiny  text-white text-center md:text-left"> Fax: Sqola.id </h6>
+    <div class="container mx-auto flex flex-wrap flex-col md:flex-row items-center px-10">
+        <div class="xl:w-2/5">
+            <h1 class="my-4 px-11 text-base text-white font-bold leading-tight text-center md:text-left"> Contact </h1>
+            <h6 class="my-1 px-11 text-tiny  text-white text-center md:text-left"> Phone Number: +62-888-8888-888 </h6>
+            <h6 class="my-1 px-11 text-tiny  text-white text-center md:text-left"> Email: contact@sqola.id </h6>
+            <h6 class="my-1 px-11 text-tiny  text-white text-center md:text-left"> Fax: Sqola.id </h6>
+        </div>
+        <div class="xl:w-3/5">
+            <h1 class="my-0 px-11 text-base text-white font-bold leading-tight text-center md:text-left"> About Us </h1>
+            <h1 class="my-4 px-11 text-tiny text-white leading-tight text-center md:text-left"> Sqola offers free high-school level courses on various topics. We strive to educate students all around the world through e-Learning platform and digitalization. We believe internet would play a major role on shaping our current education on years to come.</h1>
+        </div>
     </div>
 </section>
 
