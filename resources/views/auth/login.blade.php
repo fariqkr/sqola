@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.web')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sqola | E-Learning Platform</title>
+@section('title')
+Log In
+@endsection
 
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-</head>
-
-<body class="bg-gradient-to-r from-pink-300 to-purple-400">
-    <section class="pt-12 pb-16 md:pt-8 px-8 h-screen" id="login">
+@section('content')
+<div class="bg-gradient-to-r from-pink-300 to-purple-400 h-full">
+    <section class="pt-12 pb-16 md:pt-8 px-8 h-full" id="login">
         <div class="container mx-auto flex flex-wrap flex-col md:flex-row items-center px-10">
             <div class="w-full xl:w-7/12 py-6 overflow-y-hidden">
                 <img class="w-5/6 lg:mr-0" src="http://www.pngall.com/wp-content/uploads/5/Learning-PNG-Free-Download.png">
@@ -19,7 +15,7 @@
                 <div class="bg-blue-500 px-4 py-8">
                     <a class="text-black font-extrabold text-center text-3xl inline mx-9" href="/login"> LOGIN </a>
                     <p class="text-black font-extrabold text-center text-3xl inline mx-9 "> | </p>
-                    <a class="text-gray-600 font-extrabold text-center text-3xl inline mx-9" href="/signup"> SIGN UP </a>
+                    <a class="text-gray-600 font-extrabold text-center text-3xl inline mx-9" href="/register"> SIGN UP </a>
                 </div>
                 <div class="bg-white py-16 px-20">
                     <form action="" method="post">
@@ -51,13 +47,12 @@
                             <button type="submit" class="bg-pink-600 text-white px-4 py-3 rounded font-medium w-full">Login</button>
                         </div>
                         <div>
-                            <p class="pt-12 text-gray-500">Have a skill to become a teacher? Come <span class="underline text-black">join us</span></p>
+                            <p class="pt-12 text-gray-500">Have a skill to become a teacher? Come <a href="teacher/register" class="underline text-black">join us</a></p>
                         </div>
                     </form>
                 </div>
             </div>
         </div>	
     </section>
-</body>
-
-</html>
+</div>
+@endsection
