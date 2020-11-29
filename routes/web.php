@@ -16,8 +16,8 @@ Route::get('/register', function () {
 });
 
 // Students
-Route::get('/my-courses', function () {
-    return view('student.my-courses');
+Route::get('/courses/ongoing', function () {
+    return view('student.courses-ongoing');
 });
 
 // Teacher

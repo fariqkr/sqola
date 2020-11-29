@@ -1,5 +1,9 @@
 @extends('layouts.web')
 
+@section('title')
+Home
+@endsection
+
 @section('content')
 
 {{-- Home --}}
