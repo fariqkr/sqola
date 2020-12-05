@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('title')
-    @yield('title')
+Categories
 @endsection
 
 @section('layout')
@@ -12,24 +12,77 @@
             <img src="{{asset('img/logo.PNG')}}" alt="Sqola" style="height: 45px;" class="mx-8">
         </a>
         <a href="/" class="mx-3 px-10 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-700 mb-10"> Join a Course </a>
-        <a href="/courses/ongoing" class="my-2 py-2 w-full border-r-4 border-blue-500 font-medium">
+        <a href="/courses/ongoing" class="my-2 py-2 w-full text-gray-400 hover:text-gray-800 hover:bg-gray-100 font-medium">
             <div class="mx-auto w-max">
                 <i class="fas fa-book-reader mr-2"></i>
-                <span class="text-black">My Course</span>
+                <span>My Course</span>
             </div>
         </a>
-        <a href="/categories/10/fisika" class="my-2 py-2 w-full text-gray-400 hover:text-gray-800 hover:bg-gray-100 font-medium">
+        <a href="/categories/10/fisika" class="my-2 py-2 w-full border-r-4 border-blue-500 font-medium">
             <div class="mx-auto w-max">
                 <i class="fas fa-th-large mr-2"></i>
-                <span>Categories</span>
+                <span class="text-black">Categories</span>
             </div>
         </a>
     </div>
 
     <div class="w-7/12 flex flex-col items-center py-12 px-8 bg-gray-200" style="margin-left: 16.67%; margin-right: 25%">
-        @yield('content')
+        <h1 class="text-5xl px-5 font-bold text-gray-800 w-full mb-16">Categories</h1>
+
+        <div class="px-5 flex justify-evenly w-1/2 mb-4">
+            <a href="/categories/10/fisika" class="font-semibold text-gray-500">Kelas 10</a>
+            <a href="/categories/11/fisika" class="font-semibold text-gray-500">Kelas 11</a>
+            <a href="#" class="font-semibold underline">Kelas 12</a>
+        </div>
+
+        <div class="px-5 flex justify-evenly w-full mb-10">
+            <a href="/categories/12/fisika" class="font-semibold text-gray-500">Fisika</a>
+            <a href="/categories/12/matematika" class="font-semibold text-gray-500">Matematika</a>
+            <a href="/categories/12/kimia" class="font-semibold text-gray-500">Kimia</a>
+            <a href="/categories/12/biologi" class="font-semibold text-gray-500">Biologi</a>
+            <a href="/categories/12/indonesia" class="font-semibold underline">B. Indonesia</a>
+            <a href="/categories/12/inggris" class="font-semibold text-gray-500">B. Inggris</a>
+        </div>
+
+        <div class="flex flex-col w-full">
+            <a href="#" class="w-full bg-pink-200 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
+                <span class="col-span-1 text-pink-500 font-bold text-3xl border-r-2 text-center border-gray-300">Indonesia</span>
+                <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Anekdot</span>
+            </a>
+
+            <a href="#" class="w-full bg-pink-200 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
+                <span class="col-span-1 text-pink-500 font-bold text-3xl border-r-2 text-center border-gray-300">Indonesia</span>
+                <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Puisi</span>
+            </a>
+
+            <a href="#" class="w-full bg-pink-200 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
+                <span class="col-span-1 text-pink-500 font-bold text-3xl border-r-2 text-center border-gray-300">Indonesia</span>
+                <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Biografi</span>
+            </a>
+
+            <a href="#" class="w-full bg-pink-200 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
+                <span class="col-span-1 text-pink-500 font-bold text-3xl border-r-2 text-center border-gray-300">Indonesia</span>
+                <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Debat</span>
+            </a>
+
+            <a href="#" class="w-full bg-pink-200 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
+                <span class="col-span-1 text-pink-500 font-bold text-3xl border-r-2 text-center border-gray-300">Indonesia</span>
+                <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Teks Laporan Hasil Observasi</span>
+            </a>
+
+            <a href="#" class="w-full bg-pink-200 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
+                <span class="col-span-1 text-pink-500 font-bold text-3xl border-r-2 text-center border-gray-300">Indonesia</span>
+                <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Teks Negosiasi</span>
+            </a>
+
+            <a href="#" class="w-full bg-pink-200 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
+                <span class="col-span-1 text-pink-500 font-bold text-3xl border-r-2 text-center border-gray-300">Indonesia</span>
+                <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Teks Eksposisi</span>
+            </a>
+        </div>
     </div>
 
+    <!-- Right Sidebar -->
     <div class="w-3/12 flex flex-col items-center py-12 fixed top-0 right-0 z-10">
         <h1 class="font-bold text-xl uppercase text-center mb-16">Nama User</h1>
 

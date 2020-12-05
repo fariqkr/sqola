@@ -12,7 +12,6 @@
 </head>
 
 <body class="bg-white h-full text-gray-800">
-
     @yield('layout')
 </body>
 
