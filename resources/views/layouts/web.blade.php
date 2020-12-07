@@ -36,7 +36,7 @@
                 <a href="/" class="p-3 mx-1 text-blue-500 font-bold hover:text-blue-700">{{ auth('student')->user()->fullname }}</a>
             </li>
             <li>
-                <form action="/" method="post" class="inline p-3 text-white bg-blue-500 rounded hover:bg-blue-700">
+                <form action="{{ route('logout') }}" method="POST" class="inline p-3 text-white bg-blue-500 rounded hover:bg-blue-700">
                     @csrf
                     <button type="submit">Logout</button>
                 </form>

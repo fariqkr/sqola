@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\LogoutController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -9,11 +10,12 @@ Route::get('/', function () {
 })->name('landing');
 
 // Auth
-Route::get('/login', [LoginController::class, 'index'])->name('login');
-Route::post('/login', [LoginController::class, 'login']);
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::get('/teacher/register', [RegisterController::class, 'indexTeacher'])->name('register.teacher');
 Route::post('/register', [RegisterController::class, 'store']);
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+Route::post('/logout', [LogoutController::class], 'logout')->name('logout');
 
 
 // Courses

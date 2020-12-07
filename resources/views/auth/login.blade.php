@@ -18,25 +18,30 @@ Log In
                     <a class="text-gray-600 font-extrabold text-center text-3xl inline mx-9" href="/register"> SIGN UP </a>
                 </div>
                 <div class="bg-white py-16 px-20">
+                    @if (session('status'))
+                        <div class="bg-red-400 p-4 rounded-lg mb-6 text-white text-center">
+                            {{ session('status') }}
+                        </div>
+                    @endif
                     <form action="" method="post">
                         @csrf
                         <div class="mb-4">
                             <label for="email" class="sr-only">Email</label>
                             <input type="text" name="email" id="email" placeholder="Email"
                             class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('email') border-red-500 @enderror" value="{{ old('email') }}">
-            
+
                             @error('email')
                                 <div class="text-red-500 mt-2 text-sm">
                                     {{ $message }}
                                 </div>
                             @enderror
                         </div>
-            
+
                         <div class="mb-4">
                             <label for="password" class="sr-only">Password</label>
                             <input type="password" name="password" id="password" placeholder="Password"
                             class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('password') border-red-500 @enderror" value="">
-            
+
                             @error('password')
                                 <div class="text-red-500 mt-2 text-sm">
                                     {{ $message }}
@@ -52,7 +57,7 @@ Log In
                     </form>
                 </div>
             </div>
-        </div>	
+        </div>
     </section>
 </div>
 @endsection
