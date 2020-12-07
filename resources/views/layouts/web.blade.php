@@ -10,7 +10,7 @@
     <div class="container mx-auto flex justify-between">
     <ul class="flex items-center">
         <li>
-            <a href="/"> 
+            <a href="/">
                 <img src="{{asset('img/logo.PNG')}}" alt="Sqola" style="height: 45px;" class="mx-8">
             </a>
         </li>
@@ -42,10 +42,10 @@
         @endauth
         @guest
             <li>
-            <a href="/teacher/register" class="p-3 mx-1 text-blue-500 font-bold hover:text-blue-700"> Become a Teacher </a>
+                <a href="{{ route('register.teacher') }}" class="p-3 mx-1 text-blue-500 font-bold hover:text-blue-700"> Become a Teacher </a>
             </li>
             <li>
-                <a href="/login" class="p-3 text-white bg-blue-500 rounded hover:bg-blue-700 mr-3"> Login / Signup </a>
+                <a href="{{ route('login') }}" class="p-3 text-white bg-blue-500 rounded hover:bg-blue-700 mr-3"> Login / Signup </a>
             </li>
         @endguest
     </ul>

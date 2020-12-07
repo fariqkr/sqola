@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -7,13 +9,11 @@ Route::get('/', function () {
 });
 
 // Auth
-Route::get('/login', function () {
-    return view('auth.login');
-});
-
-Route::get('/register', function () {
-    return view('auth.register');
-});
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+Route::get('/register', [RegisterController::class, 'index'])->name('register');
+Route::get('/teacher/register', [RegisterController::class, 'indexTeacher'])->name('register.teacher');
+Route::post('/register', [RegisterController::class, 'store']);
 
 
 // Courses
@@ -23,12 +23,6 @@ Route::get('/courses/ongoing', function () {
 
 Route::get('/courses/complete', function () {
     return view('courses.complete');
-});
-
-
-// Teacher
-Route::get('/teacher/register', function () {
-    return view('teacher.register');
 });
 
 // Categories
