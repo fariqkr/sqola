@@ -14,18 +14,20 @@
                 <img src="{{asset('img/logo.PNG')}}" alt="Sqola" style="height: 45px;" class="mx-8">
             </a>
         </li>
-        <li>
-            <a href="#home" class="p-3 text-gray-500 hover:text-black hover:underline"> Home </a>
-        </li>
-        <li>
-            <a href="#categories" class="p-3 text-gray-500 hover:text-black hover:underline"> Categories </a>
-        </li>
-        <li>
-            <a href="#testimonial" class="p-3 text-gray-500 hover:text-black hover:underline"> Testimonial </a>
-        </li>
-        <li>
-            <a href="#contact" class="p-3 text-gray-500 hover:text-black hover:underline"> Contact Us </a>
-        </li>
+        @if (Route::is('landing'))
+            <li>
+                <a href="#home" class="p-3 text-gray-500 hover:text-black hover:underline"> Home </a>
+            </li>
+            <li>
+                <a href="#categories" class="p-3 text-gray-500 hover:text-black hover:underline"> Categories </a>
+            </li>
+            <li>
+                <a href="#testimonial" class="p-3 text-gray-500 hover:text-black hover:underline"> Testimonial </a>
+            </li>
+            <li>
+                <a href="#contact" class="p-3 text-gray-500 hover:text-black hover:underline"> Contact Us </a>
+            </li>
+        @endif
     </ul>
 
     <ul class="flex items-center">
@@ -43,9 +45,15 @@
             <li>
                 <a href="{{ route('register.teacher') }}" class="p-3 mx-1 text-blue-500 font-bold hover:text-blue-700"> Become a Teacher </a>
             </li>
-            <li>
-                <a href="{{ route('login') }}" class="p-3 text-white bg-blue-500 rounded hover:bg-blue-700 mr-3"> Login / Signup </a>
-            </li>
+            @if (Route::is('landing'))
+                <li>
+                    <a href="{{ route('login') }}" class="p-3 text-white bg-blue-500 rounded hover:bg-blue-700 mr-3"> Login / Signup </a>
+                </li>
+            @elseif (Route::is('register.teacher'))
+                <li>
+                    <a href="{{ route('login') }}" class="p-3 text-white bg-blue-500 rounded hover:bg-blue-700 mr-3"> Login / Signup </a>
+                </li>
+            @endif
         @endif
     </ul>
     </div>
