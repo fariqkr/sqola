@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('landing');
-});
+})->name('landing');
 
 // Auth
 Route::get('/login', [LoginController::class, 'index'])->name('login');

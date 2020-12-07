@@ -18,14 +18,26 @@ Register
                     <a class="text-blck font-extrabold text-center text-3xl inline mx-9" href="/signup"> SIGN UP </a>
                 </div>
                 <div class="bg-white py-16 px-20">
-                    <form action="" method="post">
+                    <form action="{{ route('register') }}" method="post">
                         @csrf
                         <div class="mb-4">
                             <label for="name" class="sr-only">Name</label>
                             <input type="text" name="name" id="name" placeholder="Your name"
-                        class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('name') border-red-500 @enderror" value="{{ old('name') }}">
-            
+                            class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('name') border-red-500 @enderror" value="{{ old('name') }}">
+
                             @error('name')
+                                <div class="text-red-500 mt-2 text-sm">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="nickname" class="sr-only">Name</label>
+                            <input type="text" name="nickname" id="nickname" placeholder="Your nickname"
+                            class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('nickname') border-red-500 @enderror" value="{{ old('nickname') }}">
+
+                            @error('nickname')
                                 <div class="text-red-500 mt-2 text-sm">
                                     {{ $message }}
                                 </div>
@@ -36,19 +48,19 @@ Register
                             <label for="email" class="sr-only">Email</label>
                             <input type="text" name="email" id="email" placeholder="Email"
                             class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('email') border-red-500 @enderror" value="{{ old('email') }}">
-            
+
                             @error('email')
                                 <div class="text-red-500 mt-2 text-sm">
                                     {{ $message }}
                                 </div>
                             @enderror
                         </div>
-            
+
                         <div class="mb-4">
                             <label for="password" class="sr-only">Password</label>
                             <input type="password" name="password" id="password" placeholder="Password"
                             class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('password') border-red-500 @enderror" value="">
-            
+
                             @error('password')
                                 <div class="text-red-500 mt-2 text-sm">
                                     {{ $message }}
@@ -60,7 +72,7 @@ Register
                             <label for="password_confirmation" class="sr-only">Confirm Password</label>
                             <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Confirm password"
                             class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('password_confirmation') border-red-500 @enderror" value="">
-            
+
                             @error('password_confirmation')
                                 <div class="text-red-500 mt-2 text-sm">
                                     {{ $message }}
@@ -77,7 +89,7 @@ Register
                     </form>
                 </div>
             </div>
-        </div>	
+        </div>
     </section>
 </div>
 @endsection

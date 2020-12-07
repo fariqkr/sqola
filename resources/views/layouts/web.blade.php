@@ -29,9 +29,9 @@
     </ul>
 
     <ul class="flex items-center">
-        @auth
+        @if (auth('student')->check())
             <li>
-                <a href="/" class="p-3 mx-1 text-blue-500 font-bold hover:text-blue-700"> Teacher Name </a>
+                <a href="/" class="p-3 mx-1 text-blue-500 font-bold hover:text-blue-700">{{ auth('student')->user()->fullname }}</a>
             </li>
             <li>
                 <form action="/" method="post" class="inline p-3 text-white bg-blue-500 rounded hover:bg-blue-700">
@@ -39,15 +39,14 @@
                     <button type="submit">Logout</button>
                 </form>
             </li>
-        @endauth
-        @guest
+        @else
             <li>
                 <a href="{{ route('register.teacher') }}" class="p-3 mx-1 text-blue-500 font-bold hover:text-blue-700"> Become a Teacher </a>
             </li>
             <li>
                 <a href="{{ route('login') }}" class="p-3 text-white bg-blue-500 rounded hover:bg-blue-700 mr-3"> Login / Signup </a>
             </li>
-        @endguest
+        @endif
     </ul>
     </div>
 </nav>
