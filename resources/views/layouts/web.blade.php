@@ -33,7 +33,7 @@
     <ul class="flex items-center">
         @if (auth('student')->check())
             <li>
-                <a href="/" class="p-3 mx-1 text-blue-500 font-bold hover:text-blue-700">{{ auth('student')->user()->fullname }}</a>
+                <a href="{{ route('course.ongoing') }}" class="p-3 mx-1 text-blue-500 font-bold hover:text-blue-700">{{ auth('student')->user()->fullname }}</a>
             </li>
             <li>
                 <form action="{{ route('logout') }}" method="POST" class="inline p-3 text-white bg-blue-500 rounded hover:bg-blue-700">
