@@ -14,34 +14,39 @@ My Courses
 
 
 <div class="flex flex-col w-full">
-    <a href="#" class="w-full bg-yellow-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
-        <span class="col-span-1 text-yellow-500 font-bold text-3xl border-r-2 text-center border-gray-300">Fisika</span>
-        <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">GLBB</span>
-    </a>
-
-    <a href="#" class="w-full bg-red-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
-        <span class="col-span-1 text-red-500 font-bold text-3xl border-r-2 text-center border-gray-300">Matematika</span>
-        <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Persamaan Nilai Mutlak</span>
-    </a>
-
-    <a href="#" class="w-full bg-blue-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
-        <span class="col-span-1 text-blue-500 font-bold text-3xl border-r-2 text-center border-gray-300">Fisika</span>
-        <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Teori Atom</span>
-    </a>
-
-    <a href="#" class="w-full bg-green-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
-        <span class="col-span-1 text-green-500 font-bold text-3xl border-r-2 text-center border-gray-300">Biologi</span>
-        <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Makhluk Hidup</span>
-    </a>
-
-    <a href="#" class="w-full bg-pink-200 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
-        <span class="col-span-1 text-pink-500 font-bold text-3xl border-r-2 text-center border-gray-300">Indonesia</span>
-        <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Kalimat Efektif</span>
-    </a>
-
-    <a href="#" class="w-full bg-purple-200 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
-        <span class="col-span-1 text-purple-500 font-bold text-3xl border-r-2 text-center border-gray-300">Inggris</span>
-        <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Persuasive Text</span>
-    </a>
+    @foreach ($courses as $course)
+        <a href="#" class="w-full
+            @if ($course->category == 'fisika')
+            bg-yellow-100
+            @elseif ($course->category == 'matematika')
+            bg-red-100
+            @elseif ($course->category == 'kimia')
+            bg-blue-100
+            @elseif ($course->category == 'biologi')
+            bg-green-100
+            @elseif ($course->category == 'indonesia')
+            bg-pink-100
+            @elseif ($course->category == 'inggris')
+            bg-purple-100
+            @endif
+            border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
+            <span class="col-span-1
+            @if ($course->category == 'fisika')
+            text-yellow-500
+            @elseif ($course->category == 'matematika')
+            text-red-500
+            @elseif ($course->category == 'kimia')
+            text-blue-500
+            @elseif ($course->category == 'biologi')
+            text-green-500
+            @elseif ($course->category == 'indonesia')
+            text-pink-500
+            @elseif ($course->category == 'inggris')
+            text-purple-500
+            @endif
+            font-bold text-3xl border-r-2 text-center border-gray-300">{{ ucwords($course->category) }}</span>
+            <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">{{ $course->course_name }}</span>
+        </a>
+    @endforeach
 </div>
 @endsection
