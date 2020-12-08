@@ -7,10 +7,26 @@ use Illuminate\Http\Request;
 class CourseController extends Controller
 {
     public function indexOngoing() {
-        return view('courses.ongoing');
+        $courses = auth('student')
+            ->user()
+            ->courses()
+            ->where('is_complete', false)
+            ->get();
+
+        return view('courses.ongoing', [
+            'courses' => $courses
+        ]);
     }
 
     public function indexComplete() {
-        return view('courses.complete');
+        $courses = auth('student')
+            ->user()
+            ->courses()
+            ->where('is_complete', true)
+            ->get();
+
+        return view('courses.complete', [
+            'courses' => $courses
+        ]);
     }
 }

@@ -3,7 +3,9 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -33,82 +35,15 @@ Route::get('/courses/kelas/matpel/course-name/quiz', function () {
 });
 
 Route::middleware('auth.student')->group(function () {
+    // Student
+    Route::post('/join', [StudentController::class, 'joinCourse'])->name('join');
+
     // Courses
     Route::get('/mycourse/ongoing', [CourseController::class, 'indexOngoing'])->name('course.ongoing');
     Route::get('/mycourse/complete', [CourseController::class, 'indexComplete'])->name('course.complete');
 
     // Categories
-    Route::get('/categories/10/fisika', function () {
-        return view('categories.kelas10.fisika');
-    });
-
-    Route::get('/categories/10/matematika', function () {
-        return view('categories.kelas10.matematika');
-    });
-
-    Route::get('/categories/10/kimia', function () {
-        return view('categories.kelas10.kimia');
-    });
-
-    Route::get('/categories/10/biologi', function () {
-        return view('categories.kelas10.biologi');
-    });
-
-    Route::get('/categories/10/indonesia', function () {
-        return view('categories.kelas10.indonesia');
-    });
-
-    Route::get('/categories/10/inggris', function () {
-        return view('categories.kelas10.inggris');
-    });
-
-    Route::get('/categories/11/fisika', function () {
-        return view('categories.kelas11.fisika');
-    });
-
-    Route::get('/categories/11/matematika', function () {
-        return view('categories.kelas11.matematika');
-    });
-
-    Route::get('/categories/11/kimia', function () {
-        return view('categories.kelas11.kimia');
-    });
-
-    Route::get('/categories/11/biologi', function () {
-        return view('categories.kelas11.biologi');
-    });
-
-    Route::get('/categories/11/indonesia', function () {
-        return view('categories.kelas11.indonesia');
-    });
-
-    Route::get('/categories/11/inggris', function () {
-        return view('categories.kelas11.inggris');
-    });
-
-    Route::get('/categories/12/fisika', function () {
-        return view('categories.kelas12.fisika');
-    });
-
-    Route::get('/categories/12/matematika', function () {
-        return view('categories.kelas12.matematika');
-    });
-
-    Route::get('/categories/12/kimia', function () {
-        return view('categories.kelas12.kimia');
-    });
-
-    Route::get('/categories/12/biologi', function () {
-        return view('categories.kelas12.biologi');
-    });
-
-    Route::get('/categories/12/indonesia', function () {
-        return view('categories.kelas12.indonesia');
-    });
-
-    Route::get('/categories/12/inggris', function () {
-        return view('categories.kelas12.inggris');
-    });
+    Route::get('/categories/{grade}/{subject}', [CategoryController::class, 'index'])->name('category');
 });
 
 

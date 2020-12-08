@@ -54,36 +54,6 @@ Categories
                         <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">{{ $course->course_name }}</span>
                     </button>
                 @endforeach
-
-                <button type="submit" name="id" value="2" class="w-full bg-yellow-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
-                    <span class="col-span-1 text-yellow-500 font-bold text-3xl border-r-2 text-center border-gray-300">Fisika</span>
-                    <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Vektor</span>
-                </button>
-
-                <button type="submit" name="id" value="3" class="w-full bg-yellow-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
-                    <span class="col-span-1 text-yellow-500 font-bold text-3xl border-r-2 text-center border-gray-300">Fisika</span>
-                    <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">GLBB</span>
-                </button>
-
-                <button type="submit" name="id" value="4" class="w-full bg-yellow-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
-                    <span class="col-span-1 text-yellow-500 font-bold text-3xl border-r-2 text-center border-gray-300">Fisika</span>
-                    <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Hukum Newton</span>
-                </button>
-
-                <button type="submit" name="id" value="5" class="w-full bg-yellow-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
-                    <span class="col-span-1 text-yellow-500 font-bold text-3xl border-r-2 text-center border-gray-300">Fisika</span>
-                    <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Usaha dan Energi</span>
-                </button>
-
-                <button type="submit" name="id" value="6" class="w-full bg-yellow-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
-                    <span class="col-span-1 text-yellow-500 font-bold text-3xl border-r-2 text-center border-gray-300">Fisika</span>
-                    <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Momentum dan Impuls</span>
-                </button>
-
-                <button type="submit" name="id" value="7" class="w-full bg-yellow-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
-                    <span class="col-span-1 text-yellow-500 font-bold text-3xl border-r-2 text-center border-gray-300">Fisika</span>
-                    <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Getaran Harmonis</span>
-                </button>
             </form>
         </div>
     </div>
