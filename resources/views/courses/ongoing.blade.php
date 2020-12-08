@@ -9,7 +9,7 @@ My Courses
 
 <div class="px-20 flex justify-evenly w-full mb-10">
     <a href="#" class="text-lg text-blue-500 underline">Ongoing</a>
-    <a href="/courses/complete" class="text-lg text-gray-500">Complete</a>
+    <a href="{{ route('course.complete') }}" class="text-lg text-gray-500">Complete</a>
 </div>
 
 <div class="flex flex-col w-full">

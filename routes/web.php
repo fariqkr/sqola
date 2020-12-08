@@ -23,8 +23,8 @@ Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 Route::middleware('auth.student')->group(function () {
     // Courses
-    Route::get('/courses/ongoing', [CourseController::class, 'indexOngoing'])->name('course.ongoing');
-    Route::get('/courses/complete', [CourseController::class, 'indexComplete'])->name('course.complete');
+    Route::get('/mycourse/ongoing', [CourseController::class, 'indexOngoing'])->name('course.ongoing');
+    Route::get('/mycourse/complete', [CourseController::class, 'indexComplete'])->name('course.complete');
 
     // Categories
     Route::get('/categories/10/fisika', function () {
