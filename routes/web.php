@@ -21,6 +21,17 @@ Route::middleware('guest.custom')->group(function () {
 });
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
+
+// Course Page
+Route::get('/courses/kelas/matpel/course-name', function () {
+    return view('courses.course');
+});
+
+// Quiz Page
+Route::get('/courses/kelas/matpel/course-name/quiz', function () {
+    return view('courses.quiz');
+});
+
 Route::middleware('auth.student')->group(function () {
     // Courses
     Route::get('/courses/ongoing', [CourseController::class, 'indexOngoing'])->name('course.ongoing');
