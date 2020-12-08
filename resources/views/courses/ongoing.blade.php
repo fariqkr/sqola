@@ -13,11 +13,13 @@ My Courses
 </div>
 
 <div class="flex flex-col w-full">
-    <a href="#" class="w-full bg-yellow-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
-        <span class="col-span-1 text-yellow-500 font-bold text-3xl border-r-2 text-center border-gray-300">Fisika</span>
-        <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Listrik Statis I</span>
-    </a>
-
+    @foreach ($courses as $course)
+        <a href="#" class="w-full bg-yellow-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
+            <span class="col-span-1 text-yellow-500 font-bold text-3xl border-r-2 text-center border-gray-300">{{ ucwords($course->category) }}</span>
+            <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">{{ $course->course_name }}</span>
+        </a>
+    @endforeach
+{{--
     <a href="#" class="w-full bg-red-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
         <span class="col-span-1 text-red-500 font-bold text-3xl border-r-2 text-center border-gray-300">Matematika</span>
         <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Persamaan Linear Kuadrat</span>
@@ -41,6 +43,6 @@ My Courses
     <a href="#" class="w-full bg-purple-200 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
         <span class="col-span-1 text-purple-500 font-bold text-3xl border-r-2 text-center border-gray-300">Inggris</span>
         <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Procedure Text</span>
-    </a>
+    </a> --}}
 </div>
 @endsection
