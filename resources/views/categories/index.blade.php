@@ -30,18 +30,18 @@ Categories
         <h1 class="text-5xl px-5 font-bold text-gray-800 w-full mb-16">Categories</h1>
 
         <div class="px-5 flex justify-evenly w-1/2 mb-4">
-            <a href="#" class="font-semibold underline">Kelas 10</a>
-            <a href="/categories/11/fisika" class="font-semibold text-gray-500">Kelas 11</a>
-            <a href="/categories/12/fisika" class="font-semibold text-gray-500">Kelas 12</a>
+            <a href="/categories/10/fisika" class="font-semibold @if($grade == '10') underline @else text-gray-500 @endif">Kelas 10</a>
+            <a href="/categories/11/fisika" class="font-semibold @if($grade == '11') underline @else text-gray-500 @endif">Kelas 11</a>
+            <a href="/categories/12/fisika" class="font-semibold @if($grade == '12') underline @else text-gray-500 @endif">Kelas 12</a>
         </div>
 
         <div class="px-5 flex justify-evenly w-full mb-10">
-            <a href="/categories/10/fisika" class="font-semibold underline">Fisika</a>
-            <a href="/categories/10/matematika" class="font-semibold text-gray-500">Matematika</a>
-            <a href="/categories/10/kimia" class="font-semibold text-gray-500">Kimia</a>
-            <a href="/categories/10/biologi" class="font-semibold text-gray-500">Biologi</a>
-            <a href="/categories/10/indonesia" class="font-semibold text-gray-500">B. Indonesia</a>
-            <a href="/categories/10/inggris" class="font-semibold text-gray-500">B. Inggris</a>
+            <a href="/categories/10/fisika" class="font-semibold @if($category == 'fisika') underline @else text-gray-500 @endif">Fisika</a>
+            <a href="/categories/10/matematika" class="font-semibold @if($category == 'matematika') underline @else text-gray-500 @endif">Matematika</a>
+            <a href="/categories/10/kimia" class="font-semibold @if($category == 'kimia') underline @else text-gray-500 @endif">Kimia</a>
+            <a href="/categories/10/biologi" class="font-semibold @if($category == 'biologi') underline @else text-gray-500 @endif">Biologi</a>
+            <a href="/categories/10/indonesia" class="font-semibold @if($category == 'indonesia') underline @else text-gray-500 @endif">B. Indonesia</a>
+            <a href="/categories/10/inggris" class="font-semibold @if($category == 'inggris') underline @else text-gray-500 @endif">B. Inggris</a>
         </div>
 
         <div class="flex flex-col w-full">
@@ -49,8 +49,8 @@ Categories
                 @csrf
 
                 @foreach ($courses as $course)
-                    <button type="submit" name="id" value="{{ $course->id }}" class="w-full bg-yellow-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
-                        <span class="col-span-1 text-yellow-500 font-bold text-3xl border-r-2 text-center border-gray-300">Fisika</span>
+                    <button type="submit" name="id" value="{{ $course->id }}" class="{{ $styles[0] }}">
+                        <span class="{{ $styles[1] }}">{{ ucwords($course->category) }}</span>
                         <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">{{ $course->course_name }}</span>
                     </button>
                 @endforeach
