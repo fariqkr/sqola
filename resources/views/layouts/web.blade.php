@@ -10,8 +10,8 @@
     <div class="container mx-auto flex justify-between">
     <ul class="flex items-center">
         <li>
-            <a href="/">
-                <img src="{{asset('img/logo.PNG')}}" alt="Sqola" style="height: 45px;" class="mx-8">
+            <a href="{{ route('register.teacher') }}">
+                <img src="{{ asset('img/logo.PNG') }}" alt="Sqola" style="height: 45px;" class="mx-8">
             </a>
         </li>
         @if (Route::is('landing'))
