@@ -14,7 +14,7 @@ My Courses
 
 <div class="flex flex-col w-full">
     @foreach ($courses as $course)
-        <a href="#" class="w-full
+        <a href="{{ route('course.course', $course->id) }}" class="w-full
             @if ($course->category == 'fisika')
             bg-yellow-100
             @elseif ($course->category == 'matematika')

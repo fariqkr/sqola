@@ -26,7 +26,7 @@ Categories
         </a>
     </div>
 
-    <div class="w-7/12 flex flex-col items-center py-12 px-8 bg-gray-200" style="margin-left: 16.67%; margin-right: 25%">
+    <div class="w-7/12 flex flex-col items-center py-12 px-8 bg-gray-200" style="margin-left: 16.67%; margin-right: 25%; height: 100vh">
         <h1 class="text-5xl px-5 font-bold text-gray-800 w-full mb-16">Categories</h1>
 
         <div class="px-5 flex justify-evenly w-1/2 mb-4">
@@ -60,7 +60,7 @@ Categories
 
     <!-- Right Sidebar -->
     <div class="w-3/12 flex flex-col items-center py-12 fixed top-0 right-0 z-10">
-        <h1 class="font-bold text-xl uppercase text-center mb-16">Nama User</h1>
+        <h1 class="font-bold text-xl uppercase text-center mb-16">Hello, {{ auth('student')->user()->nickname }} !</h1>
 
         <!-- Courses in Progress -->
         <div class="w-full mb-10">

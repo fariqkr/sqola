@@ -12,6 +12,6 @@ class StudentController extends Controller
 
         auth('student')->user()->courses()->attach($course);
 
-        return redirect()->route('course.ongoing');
+        return redirect()->back();
     }
 }

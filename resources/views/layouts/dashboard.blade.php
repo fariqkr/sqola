@@ -26,7 +26,7 @@
         </a>
     </div>
 
-    <div class="w-7/12 flex flex-col items-center py-12 px-8 bg-gray-200" style="margin-left: 16.67%; margin-right: 25%">
+    <div class="w-7/12 flex flex-col items-center py-12 px-8 bg-gray-200" style="margin-left: 16.67%; margin-right: 25%; min-height: 100vh">
         @yield('content')
     </div>
 

@@ -42,6 +42,10 @@ Route::middleware('auth.student')->group(function () {
     Route::get('/mycourse/ongoing', [CourseController::class, 'indexOngoing'])->name('course.ongoing');
     Route::get('/mycourse/complete', [CourseController::class, 'indexComplete'])->name('course.complete');
 
+    Route::get('/courses/{course}/course', [CourseController::class, 'showCourse'])->name('course.course');
+    Route::get('/courses/{course}/quiz', [CourseController::class, 'showQuiz'])->name('course.quiz');
+    Route::post('/courses/{course}/quiz', [CourseController::class, 'submitQuiz']);
+
     // Categories
     Route::get('/categories/{grade}/{subject}', [CategoryController::class, 'index'])->name('category');
 });

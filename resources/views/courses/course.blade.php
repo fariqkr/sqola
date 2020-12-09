@@ -1,11 +1,11 @@
 @extends('layouts.course')
 
 @section('title')
-    Course Name
+    {{ $course->course_name }}
 @endsection
 
 @section('content')
-<h1 class="text-4xl font-semibold mb-10">Nama Sub-materi</h1>
+<h1 class="text-4xl font-semibold mb-10">{{ $course->course_name }} | Sub Materi 1</h1>
 
 <video width="100%" height="500"  src="{{ asset('videos/placeholder.mp4') }}" controls>
 </video>
@@ -16,6 +16,6 @@
 
 <div class="w-full flex justify-between mt-12">
     <a href="#" class="bg-blue-500 py-2 text-white rounded-lg text-center font-semibold w-1/6 hover:bg-blue-600">Previous</a>
-    <a href="#" class="bg-blue-500 py-2 text-white rounded-lg text-center font-semibold w-1/6 hover:bg-blue-600">Next</a>
+    <a href="{{ route('course.quiz', $course->id) }}" class="bg-blue-500 py-2 text-white rounded-lg text-center font-semibold w-1/6 hover:bg-blue-600">Next</a>
 </div>
 @endsection

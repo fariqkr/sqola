@@ -21,7 +21,7 @@ class Course extends Model
     ];
 
     public function students() {
-        return $this->belongsToMany(Student::class);
+        return $this->belongsToMany(Student::class)->withPivot('is_complete');
     }
 
     public function populateCourse() {
@@ -68,7 +68,7 @@ class Course extends Model
             'grade' => '10',
             'category' => 'fisika'
         ]);
-        
+
         // Kelas 11 Fisika
         $this->create([
             'course_name' => 'Fluida Statis',

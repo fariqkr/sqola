@@ -23,6 +23,6 @@ class Student extends Authenticatable
     ];
 
     public function courses() {
-        return $this->belongsToMany(Course::class);
+        return $this->belongsToMany(Course::class)->withPivot('is_complete');
     }
 }
