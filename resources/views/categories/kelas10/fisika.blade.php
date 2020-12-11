@@ -8,17 +8,17 @@ Categories
 <div class="w-full flex">
     <!-- Sidebar -->
     <div class="w-2/12 h-screen flex flex-col items-center py-12 fixed top-0 left-0 z-10">
-        <a href="/" class="px-3 mb-12"> 
+        <a href="{{ route('landing') }}" class="px-3 mb-12">
             <img src="{{asset('img/logo.PNG')}}" alt="Sqola" style="height: 45px;" class="mx-8">
         </a>
-        <a href="/" class="mx-3 px-10 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-700 mb-10"> Join a Course </a>
-        <a href="/courses/ongoing" class="my-2 py-2 w-full text-gray-400 hover:text-gray-800 hover:bg-gray-100 font-medium">
+        <a href="{{ route('category', ['10', 'fisika']) }}" class="mx-3 px-10 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-700 mb-10"> Join a Course </a>
+        <a href="{{ route('course.ongoing') }}" class="my-2 py-2 w-full text-gray-400 hover:text-gray-800 hover:bg-gray-100 font-medium">
             <div class="mx-auto w-max">
                 <i class="fas fa-book-reader mr-2"></i>
                 <span>My Course</span>
             </div>
         </a>
-        <a href="/categories/10/fisika" class="my-2 py-2 w-full border-r-4 border-blue-500 font-medium">
+        <a href="{{ route('category', ['10', 'fisika']) }}" class="my-2 py-2 w-full border-r-4 border-blue-500 font-medium">
             <div class="mx-auto w-max">
                 <i class="fas fa-th-large mr-2"></i>
                 <span class="text-black">Categories</span>
@@ -45,40 +45,46 @@ Categories
         </div>
 
         <div class="flex flex-col w-full">
-            <a href="#" class="w-full bg-yellow-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
-                <span class="col-span-1 text-yellow-500 font-bold text-3xl border-r-2 text-center border-gray-300">Fisika</span>
-                <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Besaran dan Satuan</span>
-            </a>
+            <form action="{{ route('join') }}" method="post">
+                @csrf
 
-            <a href="#" class="w-full bg-yellow-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
-                <span class="col-span-1 text-yellow-500 font-bold text-3xl border-r-2 text-center border-gray-300">Fisika</span>
-                <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Vektor</span>
-            </a>
+                @foreach ($courses as $course)
+                    <button type="submit" name="id" value="{{ $course->id }}" class="w-full bg-yellow-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
+                        <span class="col-span-1 text-yellow-500 font-bold text-3xl border-r-2 text-center border-gray-300">Fisika</span>
+                        <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">{{ $course->course_name }}</span>
+                    </button>
+                @endforeach
 
-            <a href="#" class="w-full bg-yellow-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
-                <span class="col-span-1 text-yellow-500 font-bold text-3xl border-r-2 text-center border-gray-300">Fisika</span>
-                <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">GLBB</span>
-            </a>
+                <button type="submit" name="id" value="2" class="w-full bg-yellow-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
+                    <span class="col-span-1 text-yellow-500 font-bold text-3xl border-r-2 text-center border-gray-300">Fisika</span>
+                    <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Vektor</span>
+                </button>
 
-            <a href="#" class="w-full bg-yellow-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
-                <span class="col-span-1 text-yellow-500 font-bold text-3xl border-r-2 text-center border-gray-300">Fisika</span>
-                <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Hukum Newton</span>
-            </a>
+                <button type="submit" name="id" value="3" class="w-full bg-yellow-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
+                    <span class="col-span-1 text-yellow-500 font-bold text-3xl border-r-2 text-center border-gray-300">Fisika</span>
+                    <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">GLBB</span>
+                </button>
 
-            <a href="#" class="w-full bg-yellow-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
-                <span class="col-span-1 text-yellow-500 font-bold text-3xl border-r-2 text-center border-gray-300">Fisika</span>
-                <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Usaha dan Energi</span>
-            </a>
+                <button type="submit" name="id" value="4" class="w-full bg-yellow-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
+                    <span class="col-span-1 text-yellow-500 font-bold text-3xl border-r-2 text-center border-gray-300">Fisika</span>
+                    <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Hukum Newton</span>
+                </button>
 
-            <a href="#" class="w-full bg-yellow-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
-                <span class="col-span-1 text-yellow-500 font-bold text-3xl border-r-2 text-center border-gray-300">Fisika</span>
-                <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Momentum dan Impuls</span>
-            </a>
+                <button type="submit" name="id" value="5" class="w-full bg-yellow-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
+                    <span class="col-span-1 text-yellow-500 font-bold text-3xl border-r-2 text-center border-gray-300">Fisika</span>
+                    <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Usaha dan Energi</span>
+                </button>
 
-            <a href="#" class="w-full bg-yellow-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
-                <span class="col-span-1 text-yellow-500 font-bold text-3xl border-r-2 text-center border-gray-300">Fisika</span>
-                <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Getaran Harmonis</span>
-            </a>
+                <button type="submit" name="id" value="6" class="w-full bg-yellow-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
+                    <span class="col-span-1 text-yellow-500 font-bold text-3xl border-r-2 text-center border-gray-300">Fisika</span>
+                    <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Momentum dan Impuls</span>
+                </button>
+
+                <button type="submit" name="id" value="7" class="w-full bg-yellow-100 border-2 border-gray-300 px-8 py-3 inline-grid grid-cols-3 justify-center items-center rounded-2xl mb-6">
+                    <span class="col-span-1 text-yellow-500 font-bold text-3xl border-r-2 text-center border-gray-300">Fisika</span>
+                    <span class="col-span-2 text-gray-600 font-semibold italic text-2xl text-center">Getaran Harmonis</span>
+                </button>
+            </form>
         </div>
     </div>
 

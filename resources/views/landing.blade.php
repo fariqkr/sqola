@@ -12,15 +12,17 @@ Home
     <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
         <h1 class="my-4 text-3xl md:text-5xl  font-bold leading-tight text-center md:text-left">Get Free Education</h1>
         <p class="text-base md:text-2xl mb-8 text-center md:text-left">Get Free educational and high quality education system to help you advance in your study at highschool period.</p>
-        <button class="p-4 bg-blue-500 text-white rounded-lg hover:bg-blue-700">
-            <a href="/register" >Sign Up Now</a>
-        </button>
+        <a href="{{ route('register') }}">
+            <button class="p-4 bg-blue-500 text-white rounded-lg hover:bg-blue-700">
+                Sign Up Now
+            </button>
+        </a>
     </div>
-    
+
     <div class="w-full xl:w-3/5 py-6 overflow-y-hidden">
         <img class="w-4/6 mx-auto lg:mr-0" src="http://www.pngall.com/wp-content/uploads/5/Learning-PNG-Free-Download.png">
     </div>
-    </div>	
+    </div>
 </section>
 
 {{-- Categories --}}
@@ -47,7 +49,7 @@ Home
         <div class="bg-purple-100 hover:bg-purple-200" style="grid-area: 2 / 4 / 3 / 5; padding: 120px 0px;">
             <p class=" font-extrabold text-center italic text-2xl"> BAHASA INGGRIS </p>
         </div>
-    </div>	
+    </div>
 </section>
 
 {{-- Testimonial --}}
@@ -64,7 +66,7 @@ Home
         <p class="text-base md:text-2xl mb-8 text-center md:text-left">Belajar materi vektor di <span style="text-decoration: underline; text-decoration-color: cornflowerblue; text-decoration-style:solid">Sqola</span> sangat mengasyikkan. Di tengah kesibukan tourney, aku masih sempat mengejar materi Fisika. Terimakasih <span style="text-decoration: underline; text-decoration-color: cornflowerblue; text-decoration-style:solid">Sqola</span>!</p>
         <p class="text-base md:text-base mb-8 text-center md:text-left">SMAN Rembang Rawa Quo - Kelas 10</p>
     </div>
-    </div>	
+    </div>
 </section>
 
 {{-- Footer --}}

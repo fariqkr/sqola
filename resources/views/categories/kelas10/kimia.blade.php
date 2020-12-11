@@ -8,17 +8,17 @@ Categories
 <div class="w-full flex">
     <!-- Sidebar -->
     <div class="w-2/12 h-screen flex flex-col items-center py-12 fixed top-0 left-0 z-10">
-        <a href="/" class="px-3 mb-12"> 
+        <a href="{{ route('landing') }}" class="px-3 mb-12">
             <img src="{{asset('img/logo.PNG')}}" alt="Sqola" style="height: 45px;" class="mx-8">
         </a>
-        <a href="/" class="mx-3 px-10 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-700 mb-10"> Join a Course </a>
-        <a href="/courses/ongoing" class="my-2 py-2 w-full text-gray-400 hover:text-gray-800 hover:bg-gray-100 font-medium">
+        <a href="{{ route('category', ['10', 'fisika']) }}" class="mx-3 px-10 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-700 mb-10"> Join a Course </a>
+        <a href="{{ route('course.ongoing') }}" class="my-2 py-2 w-full text-gray-400 hover:text-gray-800 hover:bg-gray-100 font-medium">
             <div class="mx-auto w-max">
                 <i class="fas fa-book-reader mr-2"></i>
                 <span>My Course</span>
             </div>
         </a>
-        <a href="/categories/10/fisika" class="my-2 py-2 w-full border-r-4 border-blue-500 font-medium">
+        <a href="{{ route('category', ['10', 'fisika']) }}" class="my-2 py-2 w-full border-r-4 border-blue-500 font-medium">
             <div class="mx-auto w-max">
                 <i class="fas fa-th-large mr-2"></i>
                 <span class="text-black">Categories</span>
@@ -27,7 +27,6 @@ Categories
     </div>
 
     <div class="w-7/12 flex flex-col items-center py-12 px-8 bg-gray-200" style="margin-left: 16.67%; margin-right: 25%">
-
         <h1 class="text-5xl px-5 font-bold text-gray-800 w-full mb-16">Categories</h1>
 
         <div class="px-5 flex justify-evenly w-1/2 mb-4">

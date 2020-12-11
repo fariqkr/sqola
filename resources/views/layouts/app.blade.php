@@ -7,6 +7,7 @@
     <title>Sqola | @yield('title')</title>
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="icon" href="{{ asset('img/favicon.png') }}" type="image/x-icon"/>
 
     <script src="https://kit.fontawesome.com/495306a581.js" crossorigin="anonymous"></script>
 </head>
