@@ -36,12 +36,12 @@ Categories
         </div>
 
         <div class="px-5 flex justify-evenly w-full mb-10">
-            <a href="/categories/10/fisika" class="font-semibold @if($category == 'fisika') underline @else text-gray-500 @endif">Fisika</a>
-            <a href="/categories/10/matematika" class="font-semibold @if($category == 'matematika') underline @else text-gray-500 @endif">Matematika</a>
-            <a href="/categories/10/kimia" class="font-semibold @if($category == 'kimia') underline @else text-gray-500 @endif">Kimia</a>
-            <a href="/categories/10/biologi" class="font-semibold @if($category == 'biologi') underline @else text-gray-500 @endif">Biologi</a>
-            <a href="/categories/10/indonesia" class="font-semibold @if($category == 'indonesia') underline @else text-gray-500 @endif">B. Indonesia</a>
-            <a href="/categories/10/inggris" class="font-semibold @if($category == 'inggris') underline @else text-gray-500 @endif">B. Inggris</a>
+            <a href="/categories/{{ $grade }}/fisika" class="font-semibold @if($category == 'fisika') underline @else text-gray-500 @endif">Fisika</a>
+            <a href="/categories/{{ $grade }}/matematika" class="font-semibold @if($category == 'matematika') underline @else text-gray-500 @endif">Matematika</a>
+            <a href="/categories/{{ $grade }}/kimia" class="font-semibold @if($category == 'kimia') underline @else text-gray-500 @endif">Kimia</a>
+            <a href="/categories/{{ $grade }}/biologi" class="font-semibold @if($category == 'biologi') underline @else text-gray-500 @endif">Biologi</a>
+            <a href="/categories/{{ $grade }}/indonesia" class="font-semibold @if($category == 'indonesia') underline @else text-gray-500 @endif">B. Indonesia</a>
+            <a href="/categories/{{ $grade }}/inggris" class="font-semibold @if($category == 'inggris') underline @else text-gray-500 @endif">B. Inggris</a>
         </div>
 
         <div class="flex flex-col w-full">
