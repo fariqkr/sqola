@@ -28,7 +28,7 @@ Home
 {{-- Categories --}}
 <section class="pt-8 pb-8 bg-white md:pt-8 px-8" id="categories">
     <div class="container mx-auto px-14" style="display: grid; grid-template-columns: 1fr repeat(3, 4fr); grid-template-rows: repeat(2, 4fr); grid-column-gap: 48px; grid-row-gap: 48px;">
-        <div class="bg-blue-500 rounded-md" style="grid-area: 1 / 1 / 3 / 2;">
+        <div class="bg-blue-500 rounded-md" style="grid-area: 1 / 1 / 3 / 2; padding: 20px;">
             <p class="text-center text-white mx-auto py-56 font-bold text-4xl" style="writing-mode: vertical-rl; margin-left: auto; margin-right: auto;"> Categories </p>
         </div>
         <div class="bg-yellow-100 hover:bg-yellow-200" style="grid-area: 1 / 2 / 2 / 3; padding: 120px 0px;">
