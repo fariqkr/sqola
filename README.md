@@ -14,3 +14,7 @@ Sqola is an e-learning web based platform.
 4. Then generate the `APP_KEY` using: `php artisan key:generate`
 5. Run migration: `php artisan migrate`
 6. Run command `php artisan serve` , the site is deployed on your localhost
+
+
+### Related Link
+PPT     : https://docs.google.com/presentation/d/1Mz0k4Kfx7iK_1JdeplIrVt1xw4gqJK1xers21fFF9FA/edit?usp=sharing
