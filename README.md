@@ -18,3 +18,4 @@ Sqola is an e-learning web based platform.
 
 ### Related Link
 PPT     : https://docs.google.com/presentation/d/1Mz0k4Kfx7iK_1JdeplIrVt1xw4gqJK1xers21fFF9FA/edit?usp=sharing
+Laporan : https://docs.google.com/document/d/11-uU9p2ZRSlZddWr_40djnaCzwWH6fW4QvG-fKyFxOQ/edit?usp=sharing
